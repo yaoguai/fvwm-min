@@ -1,0 +1,5 @@
+/out
+*~
+*.bkp
+*.swp
+.DS_Store
