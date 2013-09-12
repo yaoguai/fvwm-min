@@ -21,7 +21,7 @@ cfg ()
 
 cfg cde     eeaa66 ffffff   999999 ffffff \
             4992a7 ffffff   4992a7 ffffff \
-            ccddee 6
+            bbccdd 6
 
 cfg forest  77cc55 000000   66aa77 ddffdd \
             777777 ffffff   666666 ffffff \
