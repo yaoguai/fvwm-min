@@ -2,6 +2,7 @@
 all: build.lst
 
 build.lst: build.sh
+	mkdir -p styles
 	sh build.sh > build.lst
 
 README.html: README.md
