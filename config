@@ -82,16 +82,17 @@ Mouse 3	TSIF A        RaiseLower
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
-+ I Module FvwmPager
 + I Module FvwmCommandS
++ I Module FvwmPager
++ I Read style
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
-+ I Exec exec xsetroot -solid '{{BG_COLOR}}'
++ I Nop
 
 DestroyFunc RestartFunction
 AddToFunc RestartFunction
-+ I Exec exec xsetroot -solid '{{BG_COLOR}}'
++ I Nop
 
 DestroyFunc SessionInitFunction
 AddToFunc SessionInitFunction
@@ -142,24 +143,24 @@ EdgeScroll 0 0
 #                                                                             #
 ###############################################################################
 
-DefaultColors {{DEFAULT_FG}} {{DEFAULT_BG}}
+DefaultColors \#000000 \#d3d3d3
 DefaultFont xft:Sans:Normal:size=10:antialias=True
 Emulate Mwm
-MenuStyle * Background {{MENU_BG}}
-MenuStyle * Foreground {{MENU_FG}}
+MenuStyle * Background \#d3d3d3
+MenuStyle * Foreground \#000000
 MenuStyle * Mwm
-Style * BackColor {{NORMAL_BG}}
-Style * BorderWidth {{BD_WIDTH}}
+Style * BackColor \#d3d3d3
+Style * BorderWidth 7
 Style * ClickToFocus
 Style * DecorateTransient
 Style * EdgeMoveDelay 250
 Style * EdgeMoveResistance 10
 Style * Font xft:Sans:Bold:size=10:antialias=True
-Style * ForeColor {{NORMAL_FG}}
+Style * ForeColor \#999999
 Style * FPLenient
-Style * HandleWidth {{BD_WIDTH}}
-Style * HilightBack {{HILIGHT_BG}}
-Style * HilightFore {{HILIGHT_FG}}
+Style * HandleWidth 7
+Style * HilightBack \#d3d3d3
+Style * HilightFore \#000000
 Style * HintOverride
 Style * Icon /usr/share/pixmaps/fvwm/xterm.xpm
 Style * IconBox 1 -300 -1 -1, IconFill Left Bottom
@@ -204,8 +205,4 @@ Style FvwmPager StaysOnBottom
 *FvwmPager: BalloonYOffset +2
 *FvwmPager: Geometry 35x150+0+0
 *FvwmPager: Hilight #222222
-*FvwmPager: Label 0 1
-*FvwmPager: Label 1 2
-*FvwmPager: Label 2 3
-*FvwmPager: Label 3 4
 *FvwmPager: SmallFont 5x8

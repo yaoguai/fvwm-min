@@ -1,55 +1,68 @@
 #!/bin/sh
 
+print_cfg ()
+{
+    echo "#"
+    echo "# Style: $1"
+    echo "#"
+    echo "DefaultColors \\#${9} \\#${8}"
+    echo "MenuStyle * Background \\#${6}"
+    echo "MenuStyle * Foreground \\#${7}"
+    echo "Style * BackColor \\#${4}"
+    echo "Style * ForeColor \\#${5}"
+    echo "Style * HilightBack \\#${2}"
+    echo "Style * HilightFore \\#${3}"
+    echo "Style * BorderWidth $11"
+    echo "Style * HandleWidth $11"
+    echo "Style FvwmPager BackColor \\#000000"
+    echo "Style FvwmPager BorderWidth 1"
+    echo "Style FvwmPager HandleWidth 1"
+    echo "Style FvwmPager HilightBack \\#000000"
+    echo "Exec exec xsetroot -solid \\#${10}"
+    return $?
+}
+
 cfg ()
 {
-    name="$1"
-
-    mkdir -p "out/${name}" || return 1
-    cp config.tmpl "out/${name}/config" || return 1
-    sed -i -e "s/{{HILIGHT_BG}}/#${2}/g" "out/${name}/config"
-    sed -i -e "s/{{HILIGHT_FG}}/#${3}/g" "out/${name}/config"
-    sed -i -e "s/{{NORMAL_BG}}/#${4}/g" "out/${name}/config"
-    sed -i -e "s/{{NORMAL_FG}}/#${5}/g" "out/${name}/config"
-    sed -i -e "s/{{MENU_BG}}/#${6}/g" "out/${name}/config"
-    sed -i -e "s/{{MENU_FG}}/#${7}/g" "out/${name}/config"
-    sed -i -e "s/{{DEFAULT_BG}}/#${8}/g" "out/${name}/config"
-    sed -i -e "s/{{DEFAULT_FG}}/#${9}/g" "out/${name}/config"
-    sed -i -e "s/{{BG_COLOR}}/#${10}/g" "out/${name}/config"
-    sed -i -e "s/{{BD_WIDTH}}/${11}/g" "out/${name}/config"
-    return $?
+    print_cfg "$@" > "styles/$1"
+    echo "styles/$1"
 }
 
 cfg cde     eeaa66 ffffff   999999 ffffff \
             4992a7 ffffff   4992a7 ffffff \
-            bbccdd 6
+            cad1d9 6
 
 cfg forest  77cc55 000000   66aa77 ddffdd \
             777777 ffffff   666666 ffffff \
             303030 7
 
-cfg kr      6666cc ffffff   cccccc 000000 \
-            cccccc 000000   cccccc 000000 \
-            bbbbcc 7
-
-cfg marsh   66bb66 ffffff   9999aa ffffff \
-            99dd99 000000   33bb66 ffffff \
+cfg marsh   66dd66 000000   9999a3 ffffff \
+            99dd99 000000   99dd99 000000 \
             c3c3cc 7
 
-cfg min     d3d3d3 000000   d3d3d3 999999 \
+cfg min     d3d3d3 000000   d3d3d3 888888 \
             d3d3d3 000000   d3d3d3 000000 \
-            333333 7
+            222222 7
 
 cfg mwm     5f9ea0 ffffff   d3d3d3 000000 \
             d3d3d3 000000   d3d3d3 000000 \
             333333 7
 
-cfg solar   bb5588 ffffff   b0b0c0 000000 \
-            b0b0c0 000000   b0b0c0 000000 \
-            bbccdd 6
+cfg oxygen  c0d0e0 000000   c0d0e0 8090a0 \
+            c0d0e0 000000   c0d0e0 000000 \
+            bbccdd 7
 
-cfg tea     77dd66 000000   d3d3d3 000000 \
+cfg solar   bb5588 ffffff   b9b9c9 000000 \
+            b9b9c9 000000   b9b9c9 000000 \
+            bbccdd 6 # b0b0c0
+
+cfg t64     eeaa66 ffffff   999999 ffffff \
+            999999 ffffff   999999 ffffff \
+            aabbcc 6
+
+cfg twm     00b099 ffffff   00b099 d7d7d7 \
             d3d3d3 000000   d3d3d3 000000 \
-            bbbbcc 7
+            000000 7
 
 cfg vaxen   997766 ffffff   ccaa99 000000 \
             ccaa99 000000   ccaa99 000000 \

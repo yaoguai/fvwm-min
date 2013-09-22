@@ -1,5 +1,7 @@
-/out
+.DS_Store
 *~
 *.bkp
+*.html
+*.lst
 *.swp
-.DS_Store
+/styles
