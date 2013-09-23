@@ -54,7 +54,7 @@ cfg oxygen  c0d0e0 000000   c0d0e0 8090a0 \
 
 cfg solar   bb5588 ffffff   b9b9c9 000000 \
             b9b9c9 000000   b9b9c9 000000 \
-            bbccdd 6 # b0b0c0
+            7788aa 5
 
 cfg t64     eeaa66 ffffff   999999 ffffff \
             999999 ffffff   999999 ffffff \
@@ -66,4 +66,4 @@ cfg twm     00b099 ffffff   00b099 d7d7d7 \
 
 cfg vaxen   997766 ffffff   ccaa99 000000 \
             ccaa99 000000   ccaa99 000000 \
-            bbbbdd 7
+            bbc0dd 7
