@@ -36,10 +36,6 @@ cfg forest  77cc55 000000   66aa77 ddffdd \
             777777 ffffff   666666 ffffff \
             303030 7
 
-cfg marsh   66dd66 000000   9999a3 ffffff \
-            99dd99 000000   99dd99 000000 \
-            c3c3cc 7
-
 cfg min     d3d3d3 000000   d3d3d3 888888 \
             d3d3d3 000000   d3d3d3 000000 \
             222222 7
@@ -52,6 +48,10 @@ cfg oxygen  c0d0e0 000000   c0d0e0 8090a0 \
             c0d0e0 000000   c0d0e0 000000 \
             bbccdd 7
 
+cfg rain    66dd66 000000   9999a3 ffffff \
+            99dd99 000000   99dd99 000000 \
+            c3c3cc 7
+
 cfg solar   bb5588 ffffff   b9b9c9 000000 \
             b9b9c9 000000   b9b9c9 000000 \
             7788aa 5
@@ -62,7 +62,7 @@ cfg t64     eeaa66 ffffff   999999 ffffff \
 
 cfg twm     00b099 ffffff   00b099 d7d7d7 \
             d3d3d3 000000   d3d3d3 000000 \
-            000000 7
+            ddddff 5
 
 cfg vaxen   997766 ffffff   ccaa99 000000 \
             ccaa99 000000   ccaa99 000000 \
