@@ -44,9 +44,9 @@ cfg mwm     5f9ea0 ffffff   d3d3d3 000000 \
             d3d3d3 000000   d3d3d3 000000 \
             333333 7
 
-cfg oxygen  c0d0e0 000000   c0d0e0 8090a0 \
+cfg oxygen  c0d0e0 000000   c0d0e0 90a0b0 \
             c0d0e0 000000   c0d0e0 000000 \
-            bbccdd 7
+            eeeeee 7
 
 cfg rain    66dd66 000000   9999a3 ffffff \
             99dd99 000000   99dd99 000000 \
