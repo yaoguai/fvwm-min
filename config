@@ -84,7 +84,10 @@ DestroyFunc StartFunction
 AddToFunc StartFunction
 + I Module FvwmCommandS
 + I Module FvwmPager
-+ I Read style
++ I Test (F $[FVWM_USERDIR]/mystyle) \
+      Read mystyle
++ I TestRc (NoMatch) \
+      Exec exec xsetroot -solid \#222222
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
