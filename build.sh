@@ -32,6 +32,10 @@ cfg cde     eeaa66 ffffff   999999 ffffff \
             4992a7 ffffff   4992a7 ffffff \
             cad1d9 6
 
+cfg console 6699cc ffffff   777777 ffffff \
+            777777 ffffff   777777 ffffff \
+            303030 6
+
 cfg forest  77cc55 000000   66aa77 ddffdd \
             777777 ffffff   666666 ffffff \
             303030 7
@@ -48,13 +52,17 @@ cfg oxygen  c0d0e0 000000   c0d0e0 90a0b0 \
             c0d0e0 000000   c0d0e0 000000 \
             eeeeee 7
 
+cfg green   00cc66 000000   777777 44ff77 \
+            777777 ffffff   777777 ffffff \
+            303030 6
+
 cfg rain    66dd66 000000   9999a3 ffffff \
             99dd99 000000   99dd99 000000 \
             c3c3cc 7
 
 cfg solar   bb5588 ffffff   b9b9c9 000000 \
             b9b9c9 000000   b9b9c9 000000 \
-            7788aa 5
+            8899bb 5
 
 cfg t64     eeaa66 ffffff   999999 ffffff \
             999999 ffffff   999999 ffffff \
@@ -62,7 +70,7 @@ cfg t64     eeaa66 ffffff   999999 ffffff \
 
 cfg twm     00b099 ffffff   00b099 d7d7d7 \
             d3d3d3 000000   d3d3d3 000000 \
-            ddddff 5
+            bbccdd 5
 
 cfg vaxen   997766 ffffff   ccaa99 000000 \
             ccaa99 000000   ccaa99 000000 \
