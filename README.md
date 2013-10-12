@@ -1,17 +1,21 @@
-Fvwm Simplicity
+FVWM Simplicity
 ===============
 
-Fvwm lacks a set of "sane defaults," and as a result of its complexity, many
-users cobble together their own configurations -- poorly. _Fvwm_ _Simplicity_
-provides the "sane defaults" that have been missing from the Fvwm distribution,
-along with some nice color themes that can be linked in.
+## Features
+
+FVWM Simplicity is a set of standard configurations for FVWM that provides a
+sane and functional set of window manager defaults. FVWM Simplicity is designed
+for people who want clean and simple window management without any cruft. Some
+basic themes are available for styling, and can be easily linked in.
 
 Out of the box, basic functionality for managing windows is provided, along
-with launching a few core applications, and some essential keyboard shortcuts.
-The look and feel is similar to Motif, but with smooth fonts. The defaults are
-simple and functional. The configurations included here can be easily used as
-the basis for further per-user configuration, or deployed as the default for a
-system-wide installation.
+with launching a few core applications, six virtual desktops, and essential
+keyboard shortcuts. The look and feel is similar to Motif, but with smooth
+fonts. The defaults are simple and functional. The configurations included here
+can be easily used as the basis for further per-user configuration, or deployed
+as the default for a system-wide installation.
+
+## Themes
 
 A number of styles are available, which provide different color themes. The
 following color themes are based on classic and familiar workstation user
@@ -26,23 +30,25 @@ interfaces:
 
 Original color themes are available for users who want to try something new:
 
+* _Console_ -- Dark theme like a VGA text mode console
 * _Forest_ -- Dense forests and natural surroundings
+* _Green_ -- Green screen terminals
 * _Min_ -- Monochromatic minimalism
 * _Oxygen_ -- Simple and clean light blue style
-* _Rain_ -- Mysterious misty marshes
+* _Rain_ -- Misty marshes and rain
 
 Your theme can be switched by simply changing the symbolic link _mystyle_.
 
-Installation
-------------
+## Installation
+
 The installation process includes just a few steps:
 
 1. If $HOME/.fvwm exists, make a backup as a precaution
 2. Run "make" to build the styles
 3. Run "make install" to install the configurations into $HOME/.fvwm
 
-Keyboard Shortcuts
-------------------
+## Keyboard Shortcuts
+
 A small number of keyboard shortcuts are defined by default. The most important
 to know are the following:
 
@@ -50,19 +56,35 @@ to know are the following:
 * Ctrl+Alt+C: Launch an xclock
 * Ctrl+Alt+K: Close the current window
 * Ctrl+Alt+M: Open the Root Menu
-* Ctrl+Alt+R: Restart Fvwm
+* Ctrl+Alt+R: Restart FVWM
 * Ctrl+Alt+Up: Navigate to the page above
 * Ctrl+Alt+Down: Navigate to the page below
 
-Customization
--------------
-The configurations provided here can be very easily customized. The most common
-and useful customizations are in the three following areas:
+## Choosing a theme     
+
+Themes are contained in the _styles_ subdirectory, and the symbolic link
+_mystyle_ allows users to select their own. For example, to choose the theme
+_CDE_, you might issue the following commands:
+
+    $ ln -sf ~/.fvwm/styles/cde ~/.fvwm/mystyle
+    $ FvwmCommand Restart
+
+The first command links to the _CDE_ theme, and the second restarts FVWM so the
+changes will take effect.
+
+## Making Customizations
+
+Unless you are happy with the most basic window manager functionality such as
+working in terminal windows and opening clocks, you may want to add your own
+customizations such as new menu entries or keyboard shortcuts. The standard way
+to do this is by editing your _config_ file.
+
+The most common and useful customizations are in the three following areas:
 
 1. Menu entries
 2. Keyboard and mouse shortcuts
 3. Init and restart functions
 
-Because these are the aspects that are most important for customization, they
-also appear in that order in the configuration files. This means that you can
-begin customizing Fvwm with the necessary entries as quickly as possible.
+The standard _config_ file is structured so the most common and important
+things to customize come first. You can open your _config_ file and start
+adding menu entries and new shortcuts quickly and easily.
