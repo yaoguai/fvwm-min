@@ -60,16 +60,16 @@ to know are the following:
 * Ctrl+Alt+Up: Navigate to the page above
 * Ctrl+Alt+Down: Navigate to the page below
 
-## Choosing a theme     
+## Choosing a Theme     
 
 Themes are contained in the _styles_ subdirectory, and the symbolic link
 _mystyle_ allows users to select their own. For example, to choose the theme
-_CDE_, you might issue the following commands:
+"CDE," you might issue the following commands:
 
     $ ln -sf ~/.fvwm/styles/cde ~/.fvwm/mystyle
     $ FvwmCommand Restart
 
-The first command links to the _CDE_ theme, and the second restarts FVWM so the
+The first command links to the CDE theme, and the second restarts FVWM so the
 changes will take effect.
 
 ## Making Customizations
@@ -83,8 +83,8 @@ The most common and useful customizations are in the three following areas:
 
 1. Menu entries
 2. Keyboard and mouse shortcuts
-3. Init and restart functions
+3. _StartFunction_ and _RestartFunction_
 
 The standard _config_ file is structured so the most common and important
 things to customize come first. You can open your _config_ file and start
-adding menu entries and new shortcuts quickly and easily.
+adding menu entries and new keyboard shortcuts quickly and easily.
