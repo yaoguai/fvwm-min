@@ -40,6 +40,10 @@ cfg forest  77cc55 000000   66aa77 ddffdd \
             777777 ffffff   666666 ffffff \
             303030 7
 
+cfg green   00cc66 000000   777777 44ff77 \
+            777777 ffffff   777777 ffffff \
+            303030 6
+
 cfg min     d3d3d3 000000   d3d3d3 888888 \
             d3d3d3 000000   d3d3d3 000000 \
             222222 7
@@ -51,10 +55,6 @@ cfg mwm     5f9ea0 ffffff   d3d3d3 000000 \
 cfg oxygen  c0d0e0 000000   c0d0e0 90a0b0 \
             c0d0e0 000000   c0d0e0 000000 \
             eeeeee 7
-
-cfg green   00cc66 000000   777777 44ff77 \
-            777777 ffffff   777777 ffffff \
-            303030 6
 
 cfg rain    66dd66 000000   9999a3 ffffff \
             99dd99 000000   99dd99 000000 \
