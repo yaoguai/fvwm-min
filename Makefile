@@ -5,11 +5,14 @@ build.lst: build.sh
 	mkdir -p styles
 	sh build.sh > build.lst
 
+COPYING.html: COPYING.md
+	maruku COPYING.md 2>/dev/null
+
 README.html: README.md
 	maruku README.md 2>/dev/null
 
 .PHONY: doc
-doc: README.html
+doc: COPYING.html README.html
 
 .PHONY: install
 install: build.lst
@@ -21,6 +24,7 @@ install: build.lst
 
 .PHONY: clean
 clean:
+	rm -f COPYING.html
 	rm -f README.html
 	rm -f build.lst
 	rm -f styles/*
