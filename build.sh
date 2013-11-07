@@ -62,7 +62,7 @@ cfg rain    66dd66 000000   9999a3 ffffff \
 
 cfg solar   bb5588 ffffff   b9b9c9 000000 \
             b9b9c9 000000   b9b9c9 000000 \
-            8899bb 5
+            99aacc 5
 
 cfg t64     eeaa66 ffffff   999999 ffffff \
             999999 ffffff   999999 ffffff \
