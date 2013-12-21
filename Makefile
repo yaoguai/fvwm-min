@@ -6,10 +6,10 @@ build.lst: build.sh
 	sh build.sh > build.lst
 
 COPYING.html: COPYING.md
-	maruku COPYING.md 2>/dev/null
+	kramdown COPYING.md > COPYING.html
 
 README.html: README.md
-	maruku README.md 2>/dev/null
+	kramdown README.md > README.html
 
 .PHONY: doc
 doc: COPYING.html README.html
