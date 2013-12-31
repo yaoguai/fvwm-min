@@ -21,10 +21,10 @@ A number of styles are available, which provide different color themes. These
 color themes are based on classic and familiar Unix workstation user interfaces
 like the Motif Window Manager (MWM) and the Common Desktop Environment (CDE):
 
-* _CDE_ -- Like CDE (standard)
-* _MWM_ -- Like MWM (standard)
+* _CDE_ -- Like standard CDE
+* _MWM_ -- Like standard MWM
 * _Solar_ -- Like CDE on Solaris
-* _T64_ -- Like CDE on Tru64 and VMS
+* _T64_ -- Like CDE on Tru64 UNIX and OpenVMS
 * _TWM_ -- Like TWM
 * _Ultra_ -- Like MWM on ULTRIX
 
