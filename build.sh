@@ -72,6 +72,6 @@ cfg twm     00b099 ffffff   00b099 d7d7d7 \
             d3d3d3 000000   d3d3d3 000000 \
             bbccdd 5
 
-cfg vaxen   997766 ffffff   ccaa99 000000 \
+cfg ultra   997766 ffffff   ccaa99 000000 \
             ccaa99 000000   ccaa99 000000 \
             bbc0dd 7
