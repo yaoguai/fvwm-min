@@ -3,7 +3,7 @@ all: build.lst
 
 build.lst: build.sh
 	mkdir -p styles
-	sh build.sh > build.lst
+	sh build.sh | tee build.lst
 
 COPYING.html: COPYING.md
 	kramdown COPYING.md > COPYING.html
