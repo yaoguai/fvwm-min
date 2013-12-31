@@ -17,22 +17,22 @@ as the default for a system-wide installation.
 
 ## Themes
 
-A number of styles are available, which provide different color themes. The
-following color themes are based on classic and familiar workstation user
-interfaces:
+A number of styles are available, which provide different color themes. These
+color themes are based on classic and familiar Unix workstation user interfaces
+like the Motif Window Manager (MWM) and the Common Desktop Environment (CDE):
 
-* _CDE_ -- The default CDE look as seen on many Unix workstations
-* _MWM_ -- Like the Motif window manager
-* _Solar_ -- Similar to the classic Solaris CDE palette
-* _T64_ -- Similar to the look of Tru64 and VMS CDE environments
-* _TWM_ -- Like the old TWM window manager
-* _Vaxen_ -- Takes after a line of minicomputers and workstations
+* _CDE_ -- Like CDE (standard)
+* _MWM_ -- Like MWM (standard)
+* _Solar_ -- Like CDE on Solaris
+* _T64_ -- Like CDE on Tru64 and VMS
+* _TWM_ -- Like TWM
+* _Ultra_ -- Like MWM on ULTRIX
 
-Original color themes are available for users who want to try something new:
+Original color themes are also available:
 
-* _Console_ -- Dark theme like a VGA text mode console
+* _Console_ -- VGA text mode console
 * _Forest_ -- Dense forests and natural surroundings
-* _Green_ -- Green screen terminals
+* _Green_ -- Green screen phosphor terminal
 * _Min_ -- Monochromatic minimalism
 * _Oxygen_ -- Simple and clean light blue style
 * _Rain_ -- Misty marshes and rain
@@ -41,11 +41,11 @@ Your theme can be switched by simply changing the symbolic link _mystyle_.
 
 ## Installation
 
-The installation process includes just a few steps:
+The per-user installation process includes just a few steps:
 
-1. If $HOME/.fvwm exists, make a backup as a precaution
+1. If "$HOME/.fvwm" exists, make a backup as a precaution
 2. Run "make" to build the styles
-3. Run "make install" to install the configurations into $HOME/.fvwm
+3. Run "make install" to install the configurations into "$HOME/.fvwm"
 
 ## Keyboard Shortcuts
 
