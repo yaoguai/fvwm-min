@@ -32,25 +32,25 @@ cfg cde     eeaa66 ffffff   999999 ffffff \
             4992a7 ffffff   4992a7 ffffff \
             cad1d9 6
 
-cfg console 5588dd ffffff   777777 ffffff \
+cfg console 5588cc ffffff   777777 ffffff \
             666666 ffffff   666666 ffffff \
             111111 6
 
-cfg forest  77cc55 000000   66aa77 ddffdd \
+cfg forest  77cc66 000000   66aa77 ddffdd \
             777777 ffffff   666666 ffffff \
             303030 7
 
-cfg green   00cc66 000000   777777 44ff77 \
-            777777 ffffff   777777 ffffff \
-            303030 6
+cfg green   00cc55 000000   666666 44ff77 \
+            666666 ffffff   666666 ffffff \
+            111111 6
 
 cfg min     d3d3d3 000000   d3d3d3 888888 \
             d3d3d3 000000   d3d3d3 000000 \
-            131313 7
+            444449 7
 
 cfg mwm     5f9ea0 ffffff   d3d3d3 000000 \
             d3d3d3 000000   d3d3d3 000000 \
-            333333 7
+            404040 7
 
 cfg oxygen  c0d0e0 000000   c0d0e0 708090 \
             c0d0e0 000000   c0d0e0 000000 \
@@ -65,8 +65,8 @@ cfg solar   bb5588 ffffff   b9b9c9 000000 \
             99aacc 5
 
 cfg t64     eeaa66 ffffff   999999 ffffff \
-            999999 ffffff   999999 ffffff \
-            aabbcc 6
+            939393 ffffff   939393 ffffff \
+            99aabb 6
 
 cfg twm     00b099 ffffff   00b099 d7d7d7 \
             d3d3d3 000000   d3d3d3 000000 \

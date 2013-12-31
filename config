@@ -86,7 +86,7 @@ AddToFunc StartFunction
 + I Module FvwmPager
 + I Read mystyle quiet
 + I TestRc (-1) Read $./mystyle quiet
-+ I TestRc (-1) Exec exec xsetroot -solid \#222222
++ I TestRc (-1) Exec exec xsetroot -solid \#444449
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
@@ -158,7 +158,7 @@ Style * DecorateTransient
 Style * EdgeMoveDelay 250
 Style * EdgeMoveResistance 10
 Style * Font xft:Sans:Bold:size=10:antialias=True
-Style * ForeColor \#999999
+Style * ForeColor \#888888
 Style * FPLenient
 Style * HandleWidth 7
 Style * HilightBack \#d3d3d3
