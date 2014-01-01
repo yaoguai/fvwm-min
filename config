@@ -86,7 +86,7 @@ AddToFunc StartFunction
 + I Module FvwmPager
 + I Read mystyle quiet
 + I TestRc (-1) Read $./mystyle quiet
-+ I TestRc (-1) Exec exec xsetroot -solid \#444449
++ I TestRc (-1) Exec exec xsetroot -solid \#404044
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
