@@ -23,10 +23,16 @@ like the Motif Window Manager (MWM) and the Common Desktop Environment (CDE):
 
 * _CDE_ -- Like standard CDE
 * _MWM_ -- Like standard MWM
+* _TWM1_ -- Like standard TWM in early X11 (maroon)
+* _TWM2_ -- Like standard TWM in later X11 (teal)
+
+Some variants are also available, to match special Unix looks:
+
+* _IRX_ -- Like 4Dwm on IRIX
 * _Solar_ -- Like CDE on Solaris
 * _T64_ -- Like CDE on Tru64 UNIX and OpenVMS
-* _TWM_ -- Like TWM
 * _Ultra_ -- Like MWM on ULTRIX
+* _Uware_ -- Like CDE on UnixWare
 
 Original color themes are also available:
 

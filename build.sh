@@ -40,13 +40,17 @@ cfg forest  77cc66 000000   66aa77 ddffdd \
             777777 ffffff   666666 ffffff \
             303030 7
 
-cfg green   00cc55 000000   666666 44ff77 \
-            666666 ffffff   666666 ffffff \
+cfg green   00bb55 000000   666666 44ff77 \
+            505050 44ff77   505050 44ff77 \
             111111 6
+
+cfg irx     bbbb99 000000   999999 000000 \
+            999999 000000   999999 000000 \
+            5577a0 6
 
 cfg min     d3d3d3 000000   d3d3d3 888888 \
             d3d3d3 000000   d3d3d3 000000 \
-            444449 7
+            404044 7
 
 cfg mwm     5f9ea0 ffffff   d3d3d3 000000 \
             d3d3d3 000000   d3d3d3 000000 \
@@ -65,13 +69,21 @@ cfg solar   bb5588 ffffff   b9b9c9 000000 \
             99aacc 5
 
 cfg t64     eeaa66 ffffff   999999 ffffff \
-            939393 ffffff   939393 ffffff \
+            909090 ffffff   909090 ffffff \
             99aabb 6
 
-cfg twm     00b099 ffffff   00b099 d7d7d7 \
-            d3d3d3 000000   d3d3d3 000000 \
-            bbccdd 5
+cfg twm1    c05070 ffffff   c05070 c0c0c0 \
+            cccccc 000000   cccccc 000000 \
+            aaaabb 5
+
+cfg twm2    00b099 ffffff   00b099 d3d3d3 \
+            cccccc 000000   cccccc 000000 \
+            99aabb 5
 
 cfg ultra   997766 ffffff   ccaa99 000000 \
             ccaa99 000000   ccaa99 000000 \
             bbc0dd 7
+
+cfg uware   eecc77 000000   4477aa ffffff \
+            4477aa ffffff   4477aa ffffff \
+            aaaabb 6
