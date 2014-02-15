@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Safely change the style for FVWM-min. This script just changes a symlink and
+# restarts FVWM. However, it does so safely. It can also give help on which
+# styles are available, usage information, etc. This should work on any POSIX
+# compliant shell.
+
+my_dir=$(dirname "$0")
+my_name=$(basename "$0")
+
+print_usage ()
+{
+    echo "Usage: $my_name STYLE_NAME" 1>&2
+    echo
+    echo 'Styles:'
+    echo
+    ls "${my_dir}/styles" | cat
+    echo
+    return 0
+}
+
+main ()
+{
+    if [ "$#" != 1 ]; then
+        print_usage
+        return 1
+    elif [ ! -f "${my_dir}/styles/${1}" ]; then
+        print_usage
+        return 1
+    elif [ -f "${my_dir}/mystyle" ]] && ! [ -L "${my_dir}/mystyle" ]; then
+        echo "Error: \"${my_dir}/mystyle\" is not a symbolic link!" 1>&2
+        return 1
+    fi
+
+    rm -f "${my_dir}/mystyle" || return 1
+    ln -sf "${my_dir}/styles/${1}" "${my_dir}/mystyle" || return 1
+    FvwmCommand Restart 2>/dev/null
+    return 0
+}
+
+main "$@"

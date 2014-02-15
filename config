@@ -21,10 +21,10 @@ AddToMenu Window-Ops
 
 AddToMenu X11-Session
 + "Re&fresh Screen"   Refresh
-+ "&Restart Fvwm"     Restart
++ "&Restart WM"       Restart
 + ""                  Nop
 + "Exit to xterm"     Restart xterm
-+ "Exit Fvwm"         Quit
++ "Exit WM"           Quit
 
 ###############################################################################
 #                                                                             #
@@ -86,7 +86,7 @@ AddToFunc StartFunction
 + I Module FvwmPager
 + I Read mystyle quiet
 + I TestRc (-1) Read $./mystyle quiet
-+ I TestRc (-1) Exec exec xsetroot -solid \#404044
++ I TestRc (-1) Exec exec xsetroot -solid \#404040
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
@@ -152,15 +152,15 @@ MenuStyle * Background \#d3d3d3
 MenuStyle * Foreground \#000000
 MenuStyle * Mwm
 Style * BackColor \#d3d3d3
-Style * BorderWidth 7
+Style * BorderWidth 6
 Style * ClickToFocus
 Style * DecorateTransient
 Style * EdgeMoveDelay 250
 Style * EdgeMoveResistance 10
 Style * Font xft:Sans:Bold:size=10:antialias=True
-Style * ForeColor \#888888
+Style * ForeColor \#808080
 Style * FPLenient
-Style * HandleWidth 7
+Style * HandleWidth 6
 Style * HilightBack \#d3d3d3
 Style * HilightFore \#000000
 Style * HintOverride

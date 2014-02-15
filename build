@@ -1,0 +1,201 @@
+#!/bin/sh
+
+# $1: Name
+# $2: Window border width
+# $3: X11 root window color
+# $4-7: Colorset data
+#
+print_cfg ()
+{
+    echo "#"
+    echo "# Style: $1"
+    echo "#"
+    echo "CleanupColorsets"
+    echo "DefaultColorset 0"           # tmp
+    echo "Style * ColorSet 1"          # tmp
+    echo "Style * HilightColorset 2"   # tmp
+    echo "MenuStyle * MenuColorset 3"  # tmp
+    echo "ColorSet 0 $4"
+    echo "ColorSet 1 $5"
+    echo "ColorSet 2 $6"
+    echo "ColorSet 3 $7"
+    echo "Style * BorderWidth $2"
+    echo "Style * HandleWidth $2"
+    echo "Style FvwmPager BackColor \\#000000"
+    echo "Style FvwmPager BorderWidth 1"
+    echo "Style FvwmPager HandleWidth 1"
+    echo "Style FvwmPager HilightBack \\#000000"
+    echo "Exec exec xsetroot -solid \\#${3}"
+    return $?
+}
+
+cfg ()
+{
+    print_cfg "$@" > "styles/$1"
+    echo "styles/$1"
+}
+
+# Colorsets:
+# 0: Default
+# 1: Standard
+# 2: Hilight
+# 3: Menu
+
+###############################################################################
+#                                                                             #
+# Styles based on TWM, the classic X11 "Tab Window Manager"                   #
+#                                                                             #
+###############################################################################
+
+# Older X11 distributions used the maroon TWM style. This was common on old
+# workstations in the 1980s and early 1990s. This style still ships with TWM,
+# but it is not the default. This is an approximation.
+#
+cfg twm1 5 b9c0c9 \
+             'fg \#ffffff, bg \#c94979' \
+             'fg \#d3d3d3, bg \#c94979' \
+             'fg \#ffffff, bg \#c94979' \
+             'fg \#ffffff, bg \#c94979'
+
+# At some point, the default TWM style became a teal color. This is that style,
+# which is now commonly associated with TWM. This is an approximation.
+#
+cfg twm2 5 b9c0c9 \
+             'fg \#ffffff, bg \#009980' \
+             'fg \#d9d9d9, bg \#00a089' \
+             'fg \#ffffff, bg \#00a089' \
+             'fg \#ffffff, bg \#009980'
+
+# TWM on some Japanese workstations use this type of light blue TWM style,
+# which is more typical of Japanese aesthetics than the maroon or the teal.
+# This is an approximation.
+#
+cfg twm3 5 707070 \
+             'fg \#000000, bg \#99b9f9' \
+             'fg \#304050, bg \#99b9f9' \
+             'fg \#000000, bg \#99b9f9' \
+             'fg \#000000, bg \#99b9f9'
+
+###############################################################################
+#                                                                             #
+# Styles based on MWM, the Motif Window Manager                               #
+#                                                                             #
+###############################################################################
+
+# Exact color stylings in the default distribution of the Motif Window Manager.
+# The background color is just chosen as a neutral match that contrasts well.
+#
+cfg mwm 7 404040 \
+             'fg \#000000, bg \#c4c4c4, hi \#e6e6e6, sh \#6c6c6c' \
+             'fg \#000000, bg \#d3d3d3, hi \#ededed, sh \#767676' \
+             'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
+             'fg \#000000, bg \#c4c4c4, hi \#e6e6e6, sh \#6c6c6c'
+
+# Sampled from DECWindows with Motif, as seen in Ultrix, VMS, etc.
+#
+cfg decw 7 4b6276 \
+             'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
+             'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
+             'fg \#000000, bg \#987867, hi \#af998e, sh \#523728' \
+             'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867'
+
+###############################################################################
+#                                                                             #
+# Styles based on IRIX 4Dwm, the 4D Window Manager                            #
+#                                                                             #
+###############################################################################
+
+# This is somewhat close to 4Dwm, but had to be adjusted a fair amount because
+# the Motif type stylings for 4Dwm are different from those emulated by FVWM.
+# Some colors have been lightened for more clarity.
+#
+cfg 4d 6 4c719e \
+             'fg \#000000, bg \#c1c1c1, hi \#eaeaea, sh \#717171' \
+             'fg \#000000, bg \#999999, hi \#c1c1c1, sh \#424242' \
+             'fg \#000000, bg \#b5af90, hi \#dad7ca, sh \#5b5746' \
+             'fg \#000000, bg \#c1c1c1, hi \#eaeaea, sh \#717171'
+
+###############################################################################
+#                                                                             #
+# Styles based on CDE, the Common Desktop Environment                         #
+#                                                                             #
+###############################################################################
+
+# This is the CDE "Default" color style, as seen on many Unix workstations. The
+# Window handle width is set to 6, as seen on AIX, HP-UX, etc. The background
+# is a mixing derived from the default "Gradient" backdrop in CDE. Menu
+# hilights and shading are autogenerated, which works better in this case.
+#
+cfg cde 5 9090a0 \
+             'fg \#ffffff, bg \#4992a7' \
+             'fg \#ffffff, bg \#999999, hi \#d1d1d2, sh \#4e4e4e' \
+             'fg \#ffffff, bg \#eda870, hi \#f7d9c0, sh \#7d593b' \
+             'fg \#ffffff, bg \#4992a7'
+
+# The following settings were sampled from CDE in Solaris. CDE in Solaris uses
+# the "Crimson" color style by default, and "more colors for applications" set.
+# The background color is the default "Foreground" backdrop from CDE, which
+# matches well with Crimson.
+#
+cfg solar 5 8998aa \
+             'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
+             'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
+             'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
+             'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069'
+
+# This styling is similar to that found on Tru64 and OpenVMS CDE environments.
+# The menus do not have teal, but rather gray. The background color is the
+# style "Foreground" from the CDE defaults. Menus have been darkened slightly
+# for greater readability.
+#
+cfg t64 5 8998aa \
+             'fg \#ffffff, bg \#909090' \
+             'fg \#ffffff, bg \#999999, hi \#d1d1d2, sh \#4e4e4e' \
+             'fg \#ffffff, bg \#eda870, hi \#f7d9c0, sh \#7d593b' \
+             'fg \#ffffff, bg \#909090'
+
+# This is sampled from screenshots of CDE on SCO UnixWare, a fairly unique
+# yellow and navy blue type of theme. If you use this color style on a
+# GNU/Linux system, the Universe will explode.
+#
+cfg uware 6 808090 \
+             'fg \#ffffff, bg \#30619d' \
+             'fg \#ffffff, bg \#30619d, hi \#9db6d2, sh \#182c48' \
+             'fg \#000000, bg \#f6d681' \
+             'fg \#ffffff, bg \#30619d'
+
+###############################################################################
+#                                                                             #
+# New and original FVWM styles                                                #
+#                                                                             #
+###############################################################################
+
+cfg console 5 101010 \
+             'fg \#ffffff, bg \#707070' \
+             'fg \#ffffff, bg \#707070' \
+             'fg \#ffffff, bg \#5588cc' \
+             'fg \#ffffff, bg \#696969'
+
+cfg forest 7 303030 \
+             'fg \#ffffff, bg \#606060' \
+             'fg \#ddffdd, bg \#66aa77' \
+             'fg \#000000, bg \#77cc66' \
+             'fg \#ffffff, bg \#707070'
+
+cfg green 6 111111 \
+             'fg \#50ff70, bg \#404040' \
+             'fg \#50ff70, bg \#505050' \
+             'fg \#000000, bg \#00b979' \
+             'fg \#70ff90, bg \#404040'
+
+cfg min 6 404040 \
+             'fg \#000000, bg \#d3d3d3' \
+             'fg \#808080, bg \#d3d3d3' \
+             'fg \#000000, bg \#d3d3d3' \
+             'fg \#000000, bg \#d3d3d3'
+
+cfg minl 6 808090 \
+             'fg \#000000, bg \#d3d3d3' \
+             'fg \#808080, bg \#d3d3d3' \
+             'fg \#000000, bg \#d3d3d3' \
+             'fg \#000000, bg \#d3d3d3'

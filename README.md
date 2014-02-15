@@ -1,51 +1,57 @@
-FVWM Simplicity
-===============
+FVWM-min
+========
 
-## Features
+Features
+--------
 
-FVWM Simplicity is a set of standard configurations for FVWM that provides a
-sane and functional set of window manager defaults. FVWM Simplicity is designed
-for people who want clean and simple window management without any cruft. Some
-basic themes are available for styling, and can be easily linked in.
+"FVWM-min" is a _minimal_ standard configuration for FVWM that provides a sane
+and functional set of window manager defaults. FVWM-min is designed for clean
+and simple window management without extra clutter. Styles are available for
+customizing the look, and are applied with a small shell script.
 
-Out of the box, basic functionality for managing windows is provided, along
-with launching a few core applications, six virtual desktops, and essential
-keyboard shortcuts. The look and feel is similar to Motif, but with smooth
-fonts. The defaults are simple and functional. The configurations included here
-can be easily used as the basis for further per-user configuration, or deployed
-as the default for a system-wide installation.
+FVWM-min provides:
 
-## Themes
+* Window management essentials
+* Launching core applications
+* Six virtual desktops
+* Keyboard shortcuts
+* Basic support for themes
+* Easily customizable
+
+The look and feel is similar to Motif, but with smooth fonts. The defaults are
+simple, general, and functional. Try it and see -- this is the FVWM config that
+"just works."
+
+Styles
+------
 
 A number of styles are available, which provide different color themes. These
 color themes are based on classic and familiar Unix workstation user interfaces
 like the Motif Window Manager (MWM) and the Common Desktop Environment (CDE):
 
-* _CDE_ -- Like standard CDE
-* _MWM_ -- Like standard MWM
-* _TWM1_ -- Like standard TWM in early X11 (maroon)
-* _TWM2_ -- Like standard TWM in later X11 (teal)
+* _4d_ -- Like 4Dwm on IRIX
+* _cde_ -- Like the CDE defaults
+* _decw_ -- Like MWM in DECWindows (ULTRIX, VMS, OSF/1)
+* _mwm_ -- Like the MWM defaults
+* _solar_ -- Like CDE on Solaris
+* _t64_ -- Like CDE on Tru64 UNIX and OpenVMS
+* _twm1_ -- Like TWM defaults in early X11 (maroon)
+* _twm2_ -- Like TWM defaults in later X11 (teal)
+* _twm3_ -- Like TWM on some Japanese workstations
+* _uware_ -- Like CDE on UnixWare
 
-Some variants are also available, to match special Unix looks:
+Some original styles are also available:
 
-* _IRX_ -- Like 4Dwm on IRIX
-* _Solar_ -- Like CDE on Solaris
-* _T64_ -- Like CDE on Tru64 UNIX and OpenVMS
-* _Ultra_ -- Like MWM on ULTRIX
-* _Uware_ -- Like CDE on UnixWare
+* _console_ -- Dark style like a VGA text mode console
+* _forest_ -- Dense forests and natural surroundings
+* _green_ -- Green screen phosphor terminal
+* _min_ -- Monochromatic minimalism
+* _minl_ -- Like _min_, but with a lighter backdrop
 
-Original color themes are also available:
+See "Choosing a Style" below for more details.
 
-* _Console_ -- VGA text mode console
-* _Forest_ -- Dense forests and natural surroundings
-* _Green_ -- Green screen phosphor terminal
-* _Min_ -- Monochromatic minimalism
-* _Oxygen_ -- Simple and clean light blue style
-* _Rain_ -- Misty marshes and rain
-
-Your theme can be switched by simply changing the symbolic link _mystyle_.
-
-## Installation
+Installation
+------------
 
 The per-user installation process includes just a few steps:
 
@@ -53,7 +59,8 @@ The per-user installation process includes just a few steps:
 2. Run "make" to build the styles
 3. Run "make install" to install the configurations into "$HOME/.fvwm"
 
-## Keyboard Shortcuts
+Keyboard Shortcuts
+------------------
 
 A small number of keyboard shortcuts are defined by default. The most important
 to know are the following:
@@ -66,19 +73,20 @@ to know are the following:
 * Ctrl+Alt+Up: Navigate to the page above
 * Ctrl+Alt+Down: Navigate to the page below
 
-## Choosing a Theme     
+Choosing a Style
+----------------
 
 Themes are contained in the _styles_ subdirectory, and the symbolic link
-_mystyle_ allows users to select their own. For example, to choose the theme
-"CDE," you might issue the following commands:
+_mystyle_ allows users to select their own. A shell script is provided for
+quickly and safely updating this symlink. For example, to choose the theme
+"CDE," you might issue the following command:
 
-    $ ln -sf ~/.fvwm/styles/cde ~/.fvwm/mystyle
-    $ FvwmCommand Restart
+    $ ~/.fvwm/set-style cde
 
-The first command links to the CDE theme, and the second restarts FVWM so the
-changes will take effect.
+This will switch to the CDE style and reload FVWM.
 
-## Making Customizations
+Making Customizations
+---------------------
 
 Unless you are happy with the most basic window manager functionality such as
 working in terminal windows and opening clocks, you may want to add your own
