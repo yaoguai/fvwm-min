@@ -2,7 +2,6 @@
 all: build.lst
 
 build.lst: build
-	mkdir -p styles
 	sh build | tee build.lst
 
 COPYING.html: COPYING.md

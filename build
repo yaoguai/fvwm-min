@@ -31,6 +31,7 @@ print_cfg ()
 
 cfg ()
 {
+    mkdir -p styles
     print_cfg "$@" > "styles/$1"
     echo "styles/$1"
 }
