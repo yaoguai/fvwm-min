@@ -27,7 +27,7 @@ main ()
     elif [ ! -f "${my_dir}/styles/${1}" ]; then
         print_usage
         return 1
-    elif [ -f "${my_dir}/mystyle" ]] && ! [ -L "${my_dir}/mystyle" ]; then
+    elif [ -f "${my_dir}/mystyle" ] && [ ! -L "${my_dir}/mystyle" ]; then
         echo "Error: \"${my_dir}/mystyle\" is not a symbolic link!" 1>&2
         return 1
     fi
