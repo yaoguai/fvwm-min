@@ -40,8 +40,6 @@ IgnoreModifiers L2
 #
 Key Up A CM           Scroll -100000 0
 Key Down A CM         Scroll  100000 0
-Key Left A CM         Scroll -100000 0
-Key Right A CM        Scroll  100000 0
 Key Page_Up A CM      Scroll -100000 0
 Key Page_Down A CM    Scroll  100000 0
 
