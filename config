@@ -114,7 +114,6 @@ DestroyFunc Move-or-Raise
 AddToFunc Move-or-Raise
 + I Raise
 + M Move
-+ D Lower
 
 DestroyFunc Move-or-Iconify
 AddToFunc Move-or-Iconify
