@@ -92,7 +92,7 @@ cfg mwm 7 404040 \
              'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
              'fg \#000000, bg \#c4c4c4, hi \#e6e6e6, sh \#6c6c6c'
 
-# Sampled from DECWindows with Motif, as seen in Ultrix, VMS, etc.
+# Like DECWindows Motif, as seen in Ultrix, VMS, OSF/1, and Digital UNIX.
 #
 cfg decw 7 4b6276 \
              'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
@@ -133,7 +133,7 @@ cfg cde 6 aab1b9 \
 # The following settings were sampled from CDE in Solaris. CDE in Solaris uses
 # the "Crimson" color style by default, and "more colors for applications" set.
 #
-cfg solar 5 8998aa \
+cfg solar 5 8080a0 \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
              'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
