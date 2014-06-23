@@ -29,24 +29,26 @@ A number of styles are available, which provide different color themes. These
 color themes are based on classic and familiar Unix workstation user interfaces
 like the Motif Window Manager (MWM) and the Common Desktop Environment (CDE):
 
-* _4d_ -- Like 4Dwm on IRIX
+* _4dwm_ -- Like 4Dwm on IRIX
 * _cde_ -- Like the CDE defaults
-* _decw_ -- Like MWM in DECWindows (ULTRIX, VMS, OSF/1)
+* _decw1_ -- Like DECWindows with MWM (ULTRIX, OSF/1, VMS)
+* _decw2_ -- Like DECWindows with CDE (Digital UNIX, Tru64, OpenVMS)
 * _mwm_ -- Like the MWM defaults
 * _solar_ -- Like CDE on Solaris
-* _t64_ -- Like CDE on Tru64 UNIX and OpenVMS
 * _twm1_ -- Like TWM defaults in early X11 (maroon)
 * _twm2_ -- Like TWM defaults in later X11 (teal)
 * _twm3_ -- Like TWM on some Japanese workstations
 * _uware_ -- Like CDE on UnixWare
+* _vue_ -- Like VUE on early HP-UX
 
 Some original styles are also available:
 
 * _console_ -- Dark style like a VGA text mode console
-* _forest_ -- Dense forests and natural surroundings
+* _forest_ -- Dense forests and vegetation
 * _green_ -- Green screen phosphor terminal
 * _min_ -- Monochromatic minimalism
 * _minl_ -- Like _min_, but with a lighter backdrop
+* _tea_ -- Light and natural colors
 
 See "Choosing a Style" below for more details.
 

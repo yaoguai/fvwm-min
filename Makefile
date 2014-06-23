@@ -1,34 +1,45 @@
-.PHONY: all
+INSTALL = install
+
+PROGRAM = fvwm-min
+
+.PHONY: all clean dist install uninstall
+
 all: build.lst
 
 build.lst: build
 	sh build | tee build.lst
 
-COPYING.html: COPYING.md
-	kramdown COPYING.md > COPYING.html
+dist:
+	rm -rf dist
+	mkdir -p -m 0755 dist/$(PROGRAM)
+	mkdir -p -m 0755 dist/$(PROGRAM)/styles
+	mkdir -p -m 0755 dist/$(PROGRAM)/styles/base
+	ln build dist/$(PROGRAM)
+	ln config dist/$(PROGRAM)
+	ln set-style dist/$(PROGRAM)
+	ln Makefile dist/$(PROGRAM)
+	ln COPYING.md dist/$(PROGRAM)
+	ln README.md dist/$(PROGRAM)
+	cd dist && tar cf $(PROGRAM).tar $(PROGRAM)
+	rm -rf dist/$(PROGRAM)
+	gzip -9 dist/$(PROGRAM).tar
 
-README.html: README.md
-	kramdown README.md > README.html
-
-.PHONY: doc
-doc: COPYING.html README.html
-
-.PHONY: install
 install: build.lst
 	mkdir -p -m 0755 $(HOME)/.fvwm
-	mkdir -p -m 0755 $(HOME)/.fvwm/styles
-	install -m 0644 config $(HOME)/.fvwm
-	install -m 0755 set-style $(HOME)/.fvwm
-	install -m 0644 styles/* $(HOME)/.fvwm/styles
-	cd $(HOME)/.fvwm && ln -sf styles/min mystyle
+	mkdir -p -m 0755 $(HOME)/.fvwm/styles/base
+	mkdir -p -m 0755 $(HOME)/.fvwm/styles/user
+	$(INSTALL) -m 0644 config $(HOME)/.fvwm
+	$(INSTALL) -m 0755 set-style $(HOME)/.fvwm
+	$(INSTALL) -m 0644 styles/base/* $(HOME)/.fvwm/styles/base
+	cd $(HOME)/.fvwm && ln -sf styles/base/min mystyle
 
-.PHONY: clean
+uninstall:
+	rm -f $(HOME)/.fvwm/set-style
+	rm -f $(HOME)/.fvwm/styles/base/*
+	rmdir $(HOME)/.fvwm/styles/base
+	cd $(HOME)/.fvwm && test -L mystyle && rm -f mystyle || true
+
 clean:
-	rm -f COPYING.html
-	rm -f README.html
+	rm -rf dist
 	rm -f build.lst
-	rm -f styles/*
-
-.PHONY: dist
-dist: clean
-	cd .. && tar cv --exclude='.git*' fvwm-min | gzip -9c > fvwm-min.tar.gz
+	rm -f styles/base/*

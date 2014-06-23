@@ -31,9 +31,9 @@ print_cfg ()
 
 cfg ()
 {
-    mkdir -p styles
-    print_cfg "$@" > "styles/$1"
-    echo "styles/$1"
+    mkdir -p styles/base
+    print_cfg "$@" > "styles/base/$1"
+    echo "styles/base/$1"
 }
 
 # Colorsets:
@@ -52,7 +52,7 @@ cfg ()
 # workstations in the 1980s and early 1990s. This style still ships with TWM,
 # but it is not the default. This is an approximation.
 #
-cfg twm1 5 b9c0c9 \
+cfg twm1 5 c0c0c0 \
              'fg \#ffffff, bg \#c94979' \
              'fg \#d3d3d3, bg \#c94979' \
              'fg \#ffffff, bg \#c94979' \
@@ -61,17 +61,17 @@ cfg twm1 5 b9c0c9 \
 # At some point, the default TWM style became a teal color. This is that style,
 # which is now commonly associated with TWM. This is an approximation.
 #
-cfg twm2 5 b9c0c9 \
-             'fg \#ffffff, bg \#009980' \
-             'fg \#d9d9d9, bg \#00a089' \
-             'fg \#ffffff, bg \#00a089' \
-             'fg \#ffffff, bg \#009980'
+cfg twm2 5 c0c0c0 \
+             'fg \#ffffff, bg \#22aa99' \
+             'fg \#d9d9d9, bg \#22aa99' \
+             'fg \#ffffff, bg \#22aa99' \
+             'fg \#ffffff, bg \#22aa99'
 
 # TWM on some Japanese workstations use this type of light blue TWM style,
 # which is more typical of Japanese aesthetics than the maroon or the teal.
 # This is an approximation.
 #
-cfg twm3 5 707070 \
+cfg twm3 5 595959 \
              'fg \#000000, bg \#99b9f9' \
              'fg \#304050, bg \#99b9f9' \
              'fg \#000000, bg \#99b9f9' \
@@ -86,19 +86,33 @@ cfg twm3 5 707070 \
 # Exact color stylings in the default distribution of the Motif Window Manager.
 # The background color is just chosen as a neutral match that contrasts well.
 #
-cfg mwm 7 404040 \
-             'fg \#000000, bg \#c4c4c4, hi \#e6e6e6, sh \#6c6c6c' \
+cfg mwm 7 303030 \
+             'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
              'fg \#000000, bg \#d3d3d3, hi \#ededed, sh \#767676' \
              'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
              'fg \#000000, bg \#c4c4c4, hi \#e6e6e6, sh \#6c6c6c'
 
-# Like DECWindows Motif, as seen in Ultrix, VMS, OSF/1, and Digital UNIX.
+###############################################################################
+#                                                                             #
+# Styles based on DECWindows                                                  #
+#                                                                             #
+###############################################################################
+
+# Like DECWindows with Motif
 #
-cfg decw 7 4b6276 \
+cfg decw1 7 798999 \
              'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
              'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
-             'fg \#000000, bg \#987867, hi \#af998e, sh \#523728' \
+             'fg \#ffffff, bg \#987867, hi \#af998e, sh \#523728' \
              'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867'
+
+# Like DECWindows with CDE
+#
+cfg decw2 5 8998aa \
+             'fg \#ffffff, bg \#909090' \
+             'fg \#ffffff, bg \#999999, hi \#d1d1d2, sh \#4e4e4e' \
+             'fg \#ffffff, bg \#eda870, hi \#f7d9c0, sh \#7d593b' \
+             'fg \#ffffff, bg \#909090'
 
 ###############################################################################
 #                                                                             #
@@ -110,7 +124,7 @@ cfg decw 7 4b6276 \
 # the Motif type stylings for 4Dwm are different from those emulated by FVWM.
 # Some colors have been lightened for more clarity.
 #
-cfg 4d 6 4c719e \
+cfg 4dwm 6 4c719e \
              'fg \#000000, bg \#c1c1c1, hi \#eaeaea, sh \#717171' \
              'fg \#000000, bg \#999999, hi \#c1c1c1, sh \#424242' \
              'fg \#000000, bg \#b5af90, hi \#dad7ca, sh \#5b5746' \
@@ -118,13 +132,19 @@ cfg 4d 6 4c719e \
 
 ###############################################################################
 #                                                                             #
-# Styles based on CDE, the Common Desktop Environment                         #
+# Styles based on VUE and CDE                                                 #
 #                                                                             #
 ###############################################################################
 
+cfg vue 7 3096c6 \
+             'fg \#000000, bg \#969696' \
+             'fg \#000000, bg \#7acac5, hi \#c5e8e5, sh \#416b68' \
+             'fg \#ffffff, bg \#fd8282, hi \#fec8c8, sh \#864545' \
+             'fg \#000000, bg \#7acac5'
+
 # This is the CDE "Default" color style, as seen on many Unix workstations.
 #
-cfg cde 6 aab1b9 \
+cfg cde 6 b9c0c9 \
              'fg \#ffffff, bg \#4992a7' \
              'fg \#ffffff, bg \#999999, hi \#d1d1d2, sh \#4e4e4e' \
              'fg \#ffffff, bg \#eda870, hi \#f7d9c0, sh \#7d593b' \
@@ -133,28 +153,16 @@ cfg cde 6 aab1b9 \
 # The following settings were sampled from CDE in Solaris. CDE in Solaris uses
 # the "Crimson" color style by default, and "more colors for applications" set.
 #
-cfg solar 5 8080a0 \
+cfg solar 5 607090 \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
              'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069'
 
-# This styling is similar to that found on Tru64 and OpenVMS CDE environments.
-# The menus do not have teal, but rather gray. The background color is the
-# style "Foreground" from the CDE defaults. Menus have been darkened slightly
-# for greater readability.
-#
-cfg t64 5 8998aa \
-             'fg \#ffffff, bg \#909090' \
-             'fg \#ffffff, bg \#999999, hi \#d1d1d2, sh \#4e4e4e' \
-             'fg \#ffffff, bg \#eda870, hi \#f7d9c0, sh \#7d593b' \
-             'fg \#ffffff, bg \#909090'
-
 # This is sampled from screenshots of CDE on SCO UnixWare, a fairly unique
-# yellow and navy blue type of theme. If you use this color style on a
-# GNU/Linux system, the Universe will explode.
+# yellow and navy blue type of theme.
 #
-cfg uware 6 808090 \
+cfg uware 6 9090a0 \
              'fg \#ffffff, bg \#30619d' \
              'fg \#ffffff, bg \#30619d, hi \#9db6d2, sh \#182c48' \
              'fg \#000000, bg \#f6d681' \
@@ -184,14 +192,20 @@ cfg green 6 111111 \
              'fg \#000000, bg \#00b979' \
              'fg \#70ff90, bg \#404040'
 
-cfg min 6 202020 \
+cfg min 6 303030 \
+             'fg \#000000, bg \#d0d0d0' \
+             'fg \#606060, bg \#d0d0d0' \
+             'fg \#000000, bg \#d0d0d0' \
+             'fg \#000000, bg \#d0d0d0'
+
+cfg minl 6 80a0c0 \
              'fg \#000000, bg \#c0c0c0' \
-             'fg \#606060, bg \#c0c0c0' \
+             'fg \#505050, bg \#c0c0c0' \
              'fg \#000000, bg \#c0c0c0' \
              'fg \#000000, bg \#c0c0c0'
 
-cfg minl 6 808090 \
-             'fg \#000000, bg \#c0c0c0' \
-             'fg \#606060, bg \#c0c0c0' \
-             'fg \#000000, bg \#c0c0c0' \
-             'fg \#000000, bg \#c0c0c0'
+cfg tea 6 9999a0 \
+             'fg \#000000, bg \#c0d0a0' \
+             'fg \#000000, bg \#7cc291' \
+             'fg \#000000, bg \#c7cb7b' \
+             'fg \#000000, bg \#c0d0a0'
