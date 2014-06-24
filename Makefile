@@ -18,7 +18,7 @@ dist:
 	ln config dist/$(PROGRAM)
 	ln set-style dist/$(PROGRAM)
 	ln Makefile dist/$(PROGRAM)
-	ln COPYING.md dist/$(PROGRAM)
+	ln LICENSE.md dist/$(PROGRAM)
 	ln README.md dist/$(PROGRAM)
 	cd dist && tar cf $(PROGRAM).tar $(PROGRAM)
 	rm -rf dist/$(PROGRAM)
