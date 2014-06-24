@@ -4,4 +4,5 @@
 *.html
 *.lst
 *.swp
+/dist
 /styles
