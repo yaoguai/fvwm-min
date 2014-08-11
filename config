@@ -202,5 +202,5 @@ Style FvwmPager StaysOnBottom
 *FvwmPager: BalloonFore #000000
 *FvwmPager: BalloonYOffset +2
 *FvwmPager: Geometry 35x150+0+0
-*FvwmPager: Hilight #222222
+*FvwmPager: Hilight #111111
 *FvwmPager: SmallFont 5x8
