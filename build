@@ -52,7 +52,7 @@ cfg ()
 # workstations in the 1980s and early 1990s. This style still ships with TWM,
 # but it is not the default. This is an approximation.
 #
-cfg twm1 5 c0c0c0 \
+cfg twm1 5 cccccc \
              'fg \#ffffff, bg \#c94979' \
              'fg \#d3d3d3, bg \#c94979' \
              'fg \#ffffff, bg \#c94979' \
@@ -61,7 +61,7 @@ cfg twm1 5 c0c0c0 \
 # At some point, the default TWM style became a teal color. This is that style,
 # which is now commonly associated with TWM. This is an approximation.
 #
-cfg twm2 5 c0c0c0 \
+cfg twm2 5 404040 \
              'fg \#ffffff, bg \#22aa99' \
              'fg \#d9d9d9, bg \#22aa99' \
              'fg \#ffffff, bg \#22aa99' \
@@ -100,7 +100,7 @@ cfg mwm 7 303030 \
 
 # Like DECWindows with Motif
 #
-cfg decw1 7 798999 \
+cfg decw1 7 708090 \
              'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
              'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
              'fg \#ffffff, bg \#987867, hi \#af998e, sh \#523728' \
@@ -108,11 +108,11 @@ cfg decw1 7 798999 \
 
 # Like DECWindows with CDE
 #
-cfg decw2 5 8998aa \
-             'fg \#ffffff, bg \#909090' \
-             'fg \#ffffff, bg \#999999, hi \#d1d1d2, sh \#4e4e4e' \
-             'fg \#ffffff, bg \#eda870, hi \#f7d9c0, sh \#7d593b' \
-             'fg \#ffffff, bg \#909090'
+cfg decw2 5 8999a9 \
+             'fg \#ffffff, bg \#898989' \
+             'fg \#ffffff, bg \#909090, hi \#c9c9c9, sh \#494949' \
+             'fg \#ffffff, bg \#e9a069, hi \#f0d0b9, sh \#795030' \
+             'fg \#ffffff, bg \#898989'
 
 ###############################################################################
 #                                                                             #
@@ -142,13 +142,13 @@ cfg vue 7 3096c6 \
              'fg \#ffffff, bg \#fd8282, hi \#fec8c8, sh \#864545' \
              'fg \#000000, bg \#7acac5'
 
-# This is the CDE "Default" color style, as seen on many Unix workstations.
+# The CDE "Default" color style, as seen on many Unix workstations.
 #
-cfg cde 6 b9c0c9 \
-             'fg \#ffffff, bg \#4992a7' \
-             'fg \#ffffff, bg \#999999, hi \#d1d1d2, sh \#4e4e4e' \
-             'fg \#ffffff, bg \#eda870, hi \#f7d9c0, sh \#7d593b' \
-             'fg \#ffffff, bg \#4992a7'
+cfg cde 6 a0a9b0 \
+             'fg \#ffffff, bg \#4089a0' \
+             'fg \#ffffff, bg \#909090, hi \#c9c9c9, sh \#494949' \
+             'fg \#ffffff, bg \#e9a069, hi \#f0d0b9, sh \#795030' \
+             'fg \#ffffff, bg \#4089a0'
 
 # The following settings were sampled from CDE in Solaris. CDE in Solaris uses
 # the "Crimson" color style by default, and "more colors for applications" set.
