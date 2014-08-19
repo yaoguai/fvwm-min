@@ -137,10 +137,10 @@ cfg 4dwm 6 4c719e \
 ###############################################################################
 
 cfg vue 7 3096c6 \
-             'fg \#000000, bg \#969696' \
+             'fg \#000000, bg \#b0b0b0' \
              'fg \#000000, bg \#7acac5, hi \#c5e8e5, sh \#416b68' \
              'fg \#ffffff, bg \#fd8282, hi \#fec8c8, sh \#864545' \
-             'fg \#000000, bg \#7acac5'
+             'fg \#000000, bg \#c0c0c0'
 
 # The CDE "Default" color style, as seen on many Unix workstations.
 #
@@ -159,8 +159,8 @@ cfg solar 5 697999 \
              'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069'
 
-# This is sampled from screenshots of CDE on SCO UnixWare, a fairly unique
-# yellow and navy blue type of theme.
+# This is sampled from screenshots of CDE on UnixWare, a fairly unique yellow
+# and navy blue type of theme.
 #
 cfg uware 6 9090a0 \
              'fg \#ffffff, bg \#30619d' \
@@ -192,13 +192,13 @@ cfg green 6 111111 \
              'fg \#000000, bg \#00b979' \
              'fg \#70ff90, bg \#404040'
 
-cfg min 6 202020 \
-             'fg \#000000, bg \#d0d0d0' \
-             'fg \#606060, bg \#d0d0d0' \
-             'fg \#000000, bg \#d0d0d0' \
-             'fg \#000000, bg \#d0d0d0'
+cfg min 6 000000 \
+             'fg \#000000, bg \#c9c9c9' \
+             'fg \#595959, bg \#c9c9c9' \
+             'fg \#000000, bg \#c9c9c9' \
+             'fg \#000000, bg \#c9c9c9'
 
-cfg minl 6 40a0c0 \
+cfg minl 6 a0b0c0 \
              'fg \#000000, bg \#c9c9c9' \
              'fg \#595959, bg \#c9c9c9' \
              'fg \#000000, bg \#c9c9c9' \
