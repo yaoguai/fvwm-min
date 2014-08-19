@@ -71,11 +71,11 @@ cfg twm2 5 404040 \
 # which is more typical of Japanese aesthetics than the maroon or the teal.
 # This is an approximation.
 #
-cfg twm3 5 595959 \
-             'fg \#000000, bg \#99b9f9' \
-             'fg \#304050, bg \#99b9f9' \
-             'fg \#000000, bg \#99b9f9' \
-             'fg \#000000, bg \#99b9f9'
+cfg twm3 5 404040 \
+             'fg \#000000, bg \#89a9e9' \
+             'fg \#303050, bg \#89a9e9' \
+             'fg \#000000, bg \#89a9e9' \
+             'fg \#000000, bg \#89a9e9'
 
 ###############################################################################
 #                                                                             #
