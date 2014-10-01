@@ -192,13 +192,13 @@ cfg green 6 111111 \
              'fg \#000000, bg \#00b979' \
              'fg \#70ff90, bg \#404040'
 
-cfg min 6 000000 \
+cfg min 6 494949 \
              'fg \#000000, bg \#c9c9c9' \
              'fg \#595959, bg \#c9c9c9' \
              'fg \#000000, bg \#c9c9c9' \
              'fg \#000000, bg \#c9c9c9'
 
-cfg minl 6 a0b0c0 \
+cfg minl 6 80a0c0 \
              'fg \#000000, bg \#c9c9c9' \
              'fg \#595959, bg \#c9c9c9' \
              'fg \#000000, bg \#c9c9c9' \
