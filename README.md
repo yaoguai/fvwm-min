@@ -34,6 +34,7 @@ like the Motif Window Manager (MWM) and the Common Desktop Environment (CDE):
 * _decw1_ -- Like DECWindows with MWM (ULTRIX, OSF/1, VMS)
 * _decw2_ -- Like DECWindows with CDE (Digital UNIX, Tru64, OpenVMS)
 * _mwm_ -- Like the MWM defaults
+* _p9_ -- Like 8½ and rio on Plan 9
 * _solar_ -- Like CDE on Solaris
 * _twm1_ -- Like TWM defaults in early X11 (maroon)
 * _twm2_ -- Like TWM defaults in later X11 (teal)

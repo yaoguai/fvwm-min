@@ -124,11 +124,11 @@ cfg decw2 5 8999a9 \
 # the Motif type stylings for 4Dwm are different from those emulated by FVWM.
 # Some colors have been lightened for more clarity.
 #
-cfg 4dwm 6 4c719e \
-             'fg \#000000, bg \#c1c1c1, hi \#eaeaea, sh \#717171' \
-             'fg \#000000, bg \#999999, hi \#c1c1c1, sh \#424242' \
-             'fg \#000000, bg \#b5af90, hi \#dad7ca, sh \#5b5746' \
-             'fg \#000000, bg \#c1c1c1, hi \#eaeaea, sh \#717171'
+cfg 4dwm 6 5070a0 \
+             'fg \#000000, bg \#d0d0d0' \
+             'fg \#000000, bg \#a9a9a9' \
+             'fg \#000000, bg \#c0c089' \
+             'fg \#000000, bg \#d0d0d0'
 
 ###############################################################################
 #                                                                             #
@@ -167,6 +167,18 @@ cfg uware 6 9090a0 \
              'fg \#ffffff, bg \#30619d, hi \#9db6d2, sh \#182c48' \
              'fg \#000000, bg \#f6d681' \
              'fg \#ffffff, bg \#30619d'
+
+###############################################################################
+#                                                                             #
+# A style similar to Plan 9's 8½ and rio window managers.                     #
+#                                                                             #
+###############################################################################
+
+cfg p9 6 707470 \
+             'fg \#000000, bg \#a9e9e9' \
+             'fg \#509090, bg \#a9e9e9' \
+             'fg \#000000, bg \#a9e9e9' \
+             'fg \#000000, bg \#a9e9e9'
 
 ###############################################################################
 #                                                                             #
