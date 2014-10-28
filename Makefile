@@ -36,7 +36,9 @@ install: build.lst
 uninstall:
 	rm -f $(HOME)/.fvwm/set-style
 	rm -f $(HOME)/.fvwm/styles/base/*
-	rmdir $(HOME)/.fvwm/styles/base
+	rmdir $(HOME)/.fvwm/styles/base || true
+	rmdir $(HOME)/.fvwm/styles/user || true
+	rmdir $(HOME)/.fvwm/styles || true
 	cd $(HOME)/.fvwm && test -L mystyle && rm -f mystyle || true
 
 clean:
