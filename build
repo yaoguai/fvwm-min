@@ -153,7 +153,7 @@ cfg cde 6 a0a9b0 \
 # The following settings were sampled from CDE in Solaris. CDE in Solaris uses
 # the "Crimson" color style by default, and "more colors for applications" set.
 #
-cfg solar 5 697999 \
+cfg solar 5 7080a0 \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
              'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
              'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
