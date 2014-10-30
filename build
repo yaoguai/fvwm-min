@@ -125,10 +125,10 @@ cfg decw2 5 8999a9 \
 # Some colors have been lightened for more clarity.
 #
 cfg 4dwm 6 5070a0 \
-             'fg \#000000, bg \#d0d0d0' \
-             'fg \#000000, bg \#a9a9a9' \
-             'fg \#000000, bg \#c0c089' \
-             'fg \#000000, bg \#d0d0d0'
+             'fg \#000000, bg \#cccccc, hi \#f0f0f0, sh \#505050' \
+             'fg \#000000, bg \#a0a0a0, hi \#d0d0d0, sh \#000000' \
+             'fg \#000000, bg \#c0b089, hi \#e0e0d0, sh \#000000' \
+             'fg \#000000, bg \#cccccc, hi \#f0f0f0, sh \#505050'
 
 ###############################################################################
 #                                                                             #
