@@ -210,7 +210,7 @@ cfg min 6 494949 \
              'fg \#000000, bg \#c9c9c9' \
              'fg \#000000, bg \#c9c9c9'
 
-cfg minl 6 80a0c0 \
+cfg minl 6 7090c0 \
              'fg \#000000, bg \#c9c9c9' \
              'fg \#595959, bg \#c9c9c9' \
              'fg \#000000, bg \#c9c9c9' \
