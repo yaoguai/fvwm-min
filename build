@@ -61,7 +61,7 @@ cfg twm1 5 cccccc \
 # At some point, the default TWM style became a teal color. This is that style,
 # which is now commonly associated with TWM. This is an approximation.
 #
-cfg twm2 5 404040 \
+cfg twm2 5 b9b9b9 \
              'fg \#ffffff, bg \#22aa99' \
              'fg \#d9d9d9, bg \#22aa99' \
              'fg \#ffffff, bg \#22aa99' \
