@@ -10,36 +10,37 @@ my_name=$(basename "$0")
 
 print_usage ()
 {
-    echo "Usage: $my_name STYLE" 1>&2
-    echo
-    echo 'Styles:'
-    echo
-    cd "${my_dir}/styles" || return 1
-    ls */* | cat
-    echo
-    return 0
+	echo "Usage: $my_name STYLE" 1>&2
+	echo
+	echo 'Styles:'
+	echo
+	cd "${my_dir}/styles" || return 1
+	ls */* | cat
+	echo
+	return 0
 }
 
 main ()
 {
-    if [ "$#" != 1 ]; then
-        print_usage
-        return 1
-    elif [ -f "${my_dir}/mystyle" ] && [ ! -L "${my_dir}/mystyle" ]; then
-        echo "Error: \"${my_dir}/mystyle\" is not a symbolic link!" 1>&2
-        return 1
-    fi
+	mystyle_path="${my_dir}/mystyle"
 
-    match=$(find "${my_dir}/styles" -name "$1" -type f | sort | head -n 1)
-    if [ -z "$match" ]; then
-        print_usage
-        return 1
-    fi
-
-    rm -f "${my_dir}/mystyle" || return 1
-    ln -sf "$match" "${my_dir}/mystyle" || return 1
-    FvwmCommand Restart 2>/dev/null
-    return 0
+	if [ "$#" != 1 ]; then
+		print_usage
+		return 1
+	fi
+	if [ -f "$mystyle_path" ] && [ ! -h "$mystyle_path" ]; then
+		printf 'Error: "%s" is not a symlink!' "$mystyle_path" 1>&2
+		return 1
+	fi
+	match=$(find "${my_dir}/styles" -name "$1" -type f | sort | head -n 1)
+	if [ ! -f "$match" ]; then
+		print_usage
+		return 1
+	fi
+	rm -f "$mystyle_path" || return 1
+	ln -sf "$match" "$mystyle_path" || return 1
+	FvwmCommand Restart 2>/dev/null
+	return 0
 }
 
 main "$@"
