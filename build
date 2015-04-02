@@ -5,35 +5,33 @@
 # $3: X11 root window color
 # $4-7: Colorset data
 #
-print_cfg ()
-{
-    echo "#"
-    echo "# Style: $1"
-    echo "#"
-    echo "CleanupColorsets"
-    echo "DefaultColorset 0"           # tmp
-    echo "Style * ColorSet 1"          # tmp
-    echo "Style * HilightColorset 2"   # tmp
-    echo "MenuStyle * MenuColorset 3"  # tmp
-    echo "ColorSet 0 $4"
-    echo "ColorSet 1 $5"
-    echo "ColorSet 2 $6"
-    echo "ColorSet 3 $7"
-    echo "Style * BorderWidth $2"
-    echo "Style * HandleWidth $2"
-    echo "Style FvwmPager BackColor \\#000000"
-    echo "Style FvwmPager BorderWidth 1"
-    echo "Style FvwmPager HandleWidth 1"
-    echo "Style FvwmPager HilightBack \\#000000"
-    echo "Exec exec xsetroot -solid \\#${3}"
-    return $?
+print_cfg () {
+	echo "#"
+	echo "# Style: $1"
+	echo "#"
+	echo "CleanupColorsets"
+	echo "DefaultColorset 0"           # tmp
+	echo "Style * ColorSet 1"          # tmp
+	echo "Style * HilightColorset 2"   # tmp
+	echo "MenuStyle * MenuColorset 3"  # tmp
+	echo "ColorSet 0 $4"
+	echo "ColorSet 1 $5"
+	echo "ColorSet 2 $6"
+	echo "ColorSet 3 $7"
+	echo "Style * BorderWidth $2"
+	echo "Style * HandleWidth $2"
+	echo "Style FvwmPager BackColor \\#000000"
+	echo "Style FvwmPager BorderWidth 1"
+	echo "Style FvwmPager HandleWidth 1"
+	echo "Style FvwmPager HilightBack \\#000000"
+	echo "Exec exec xsetroot -solid \\#${3}"
+	return $?
 }
 
-cfg ()
-{
-    mkdir -p styles/base
-    print_cfg "$@" > "styles/base/$1"
-    echo "styles/base/$1"
+cfg () {
+	mkdir -p styles/base
+	print_cfg "$@" > "styles/base/$1"
+	echo "styles/base/$1"
 }
 
 # Colorsets:
@@ -53,29 +51,29 @@ cfg ()
 # but it is not the default. This is an approximation.
 #
 cfg twm1 5 cccccc \
-             'fg \#ffffff, bg \#c94979' \
-             'fg \#d3d3d3, bg \#c94979' \
-             'fg \#ffffff, bg \#c94979' \
-             'fg \#ffffff, bg \#c94979'
+		'fg \#ffffff, bg \#c94979' \
+		'fg \#d3d3d3, bg \#c94979' \
+		'fg \#ffffff, bg \#c94979' \
+		'fg \#ffffff, bg \#c94979'
 
 # At some point, the default TWM style became a teal color. This is that style,
 # which is now commonly associated with TWM. This is an approximation.
 #
 cfg twm2 5 b9b9b9 \
-             'fg \#ffffff, bg \#22aa99' \
-             'fg \#d9d9d9, bg \#22aa99' \
-             'fg \#ffffff, bg \#22aa99' \
-             'fg \#ffffff, bg \#22aa99'
+		'fg \#ffffff, bg \#22aa99' \
+		'fg \#d9d9d9, bg \#22aa99' \
+		'fg \#ffffff, bg \#22aa99' \
+		'fg \#ffffff, bg \#22aa99'
 
 # TWM on some Japanese workstations use this type of light blue TWM style,
 # which is more typical of Japanese aesthetics than the maroon or the teal.
 # This is an approximation.
 #
 cfg twm3 5 404040 \
-             'fg \#000000, bg \#89a9e9' \
-             'fg \#303050, bg \#89a9e9' \
-             'fg \#000000, bg \#89a9e9' \
-             'fg \#000000, bg \#89a9e9'
+		'fg \#000000, bg \#89a9e9' \
+		'fg \#303050, bg \#89a9e9' \
+		'fg \#000000, bg \#89a9e9' \
+		'fg \#000000, bg \#89a9e9'
 
 ###############################################################################
 #                                                                             #
@@ -86,11 +84,11 @@ cfg twm3 5 404040 \
 # Exact color stylings in the default distribution of the Motif Window Manager.
 # The background color is just chosen as a neutral match that contrasts well.
 #
-cfg mwm 7 303030 \
-             'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
-             'fg \#000000, bg \#d3d3d3, hi \#ededed, sh \#767676' \
-             'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
-             'fg \#000000, bg \#c4c4c4, hi \#e6e6e6, sh \#6c6c6c'
+cfg mwm 7 333333 \
+		'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
+		'fg \#000000, bg \#d3d3d3, hi \#ededed, sh \#767676' \
+		'fg \#ffffff, bg \#5f9ea0, hi \#b7d4d5, sh \#2f4f50' \
+		'fg \#000000, bg \#c4c4c4, hi \#e6e6e6, sh \#6c6c6c'
 
 ###############################################################################
 #                                                                             #
@@ -101,18 +99,18 @@ cfg mwm 7 303030 \
 # Like DECWindows with Motif
 #
 cfg decw1 7 708090 \
-             'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
-             'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
-             'fg \#ffffff, bg \#987867, hi \#af998e, sh \#523728' \
-             'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867'
+		'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
+		'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867' \
+		'fg \#ffffff, bg \#987867, hi \#af998e, sh \#523728' \
+		'fg \#000000, bg \#caaa91, hi \#dcbca3, sh \#987867'
 
 # Like DECWindows with CDE
 #
 cfg decw2 5 8999a9 \
-             'fg \#ffffff, bg \#898989' \
-             'fg \#ffffff, bg \#909090, hi \#c9c9c9, sh \#494949' \
-             'fg \#ffffff, bg \#e9a069, hi \#f0d0b9, sh \#795030' \
-             'fg \#ffffff, bg \#898989'
+		'fg \#ffffff, bg \#898989' \
+		'fg \#ffffff, bg \#909090, hi \#c9c9c9, sh \#494949' \
+		'fg \#ffffff, bg \#e9a069, hi \#f0d0b9, sh \#795030' \
+		'fg \#ffffff, bg \#898989'
 
 ###############################################################################
 #                                                                             #
@@ -125,10 +123,10 @@ cfg decw2 5 8999a9 \
 # Some colors have been lightened for more clarity.
 #
 cfg 4dwm 6 5070a0 \
-             'fg \#000000, bg \#cccccc, hi \#f0f0f0, sh \#505050' \
-             'fg \#000000, bg \#a0a0a0, hi \#d0d0d0, sh \#000000' \
-             'fg \#000000, bg \#c0b089, hi \#e0e0d0, sh \#000000' \
-             'fg \#000000, bg \#cccccc, hi \#f0f0f0, sh \#505050'
+		'fg \#000000, bg \#cccccc, hi \#f0f0f0, sh \#505050' \
+		'fg \#000000, bg \#a0a0a0, hi \#d0d0d0, sh \#000000' \
+		'fg \#000000, bg \#c0b089, hi \#e0e0d0, sh \#000000' \
+		'fg \#000000, bg \#cccccc, hi \#f0f0f0, sh \#505050'
 
 ###############################################################################
 #                                                                             #
@@ -137,36 +135,36 @@ cfg 4dwm 6 5070a0 \
 ###############################################################################
 
 cfg vue 7 3096c6 \
-             'fg \#000000, bg \#b0b0b0' \
-             'fg \#000000, bg \#7acac5, hi \#c5e8e5, sh \#416b68' \
-             'fg \#ffffff, bg \#fd8282, hi \#fec8c8, sh \#864545' \
-             'fg \#000000, bg \#c0c0c0'
+		'fg \#000000, bg \#b0b0b0' \
+		'fg \#000000, bg \#7acac5, hi \#c5e8e5, sh \#416b68' \
+		'fg \#ffffff, bg \#fd8282, hi \#fec8c8, sh \#864545' \
+		'fg \#000000, bg \#c0c0c0'
 
 # The CDE "Default" color style, as seen on many Unix workstations.
 #
 cfg cde 6 a0a9b0 \
-             'fg \#ffffff, bg \#4089a0' \
-             'fg \#ffffff, bg \#909090, hi \#c9c9c9, sh \#494949' \
-             'fg \#ffffff, bg \#e9a069, hi \#f0d0b9, sh \#795030' \
-             'fg \#ffffff, bg \#4089a0'
+		'fg \#ffffff, bg \#4089a0' \
+		'fg \#ffffff, bg \#909090, hi \#c9c9c9, sh \#494949' \
+		'fg \#ffffff, bg \#e9a069, hi \#f0d0b9, sh \#795030' \
+		'fg \#ffffff, bg \#4089a0'
 
 # The following settings were sampled from CDE in Solaris. CDE in Solaris uses
 # the "Crimson" color style by default, and "more colors for applications" set.
 #
 cfg solar 5 7080a0 \
-             'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
-             'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
-             'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
-             'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069'
+		'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
+		'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
+		'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
+		'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069'
 
 # This is sampled from screenshots of CDE on UnixWare, a fairly unique yellow
 # and navy blue type of theme.
 #
 cfg uware 6 9090a0 \
-             'fg \#ffffff, bg \#30619d' \
-             'fg \#ffffff, bg \#30619d, hi \#9db6d2, sh \#182c48' \
-             'fg \#000000, bg \#f6d681' \
-             'fg \#ffffff, bg \#30619d'
+		'fg \#ffffff, bg \#30619d' \
+		'fg \#ffffff, bg \#30619d, hi \#9db6d2, sh \#182c48' \
+		'fg \#000000, bg \#f6d681' \
+		'fg \#ffffff, bg \#30619d'
 
 ###############################################################################
 #                                                                             #
@@ -175,10 +173,10 @@ cfg uware 6 9090a0 \
 ###############################################################################
 
 cfg p9 6 777777 \
-             'fg \#000000, bg \#99e9e9' \
-             'fg \#409090, bg \#99e9e9' \
-             'fg \#000000, bg \#99e9e9' \
-             'fg \#000000, bg \#99e9e9'
+		'fg \#000000, bg \#99e9e9' \
+		'fg \#409090, bg \#99e9e9' \
+		'fg \#000000, bg \#99e9e9' \
+		'fg \#000000, bg \#99e9e9'
 
 ###############################################################################
 #                                                                             #
@@ -187,37 +185,37 @@ cfg p9 6 777777 \
 ###############################################################################
 
 cfg console 5 101010 \
-             'fg \#ffffff, bg \#707070' \
-             'fg \#ffffff, bg \#707070' \
-             'fg \#ffffff, bg \#5588cc' \
-             'fg \#ffffff, bg \#696969'
+		'fg \#ffffff, bg \#707070' \
+		'fg \#ffffff, bg \#707070' \
+		'fg \#ffffff, bg \#5588cc' \
+		'fg \#ffffff, bg \#696969'
 
 cfg forest 7 303030 \
-             'fg \#ffffff, bg \#606060' \
-             'fg \#ddffdd, bg \#66aa77' \
-             'fg \#000000, bg \#77cc66' \
-             'fg \#ffffff, bg \#707070'
+		'fg \#ffffff, bg \#606060' \
+		'fg \#ddffdd, bg \#66aa77' \
+		'fg \#000000, bg \#77cc66' \
+		'fg \#ffffff, bg \#707070'
 
 cfg green 6 111111 \
-             'fg \#50ff70, bg \#404040' \
-             'fg \#50ff70, bg \#505050' \
-             'fg \#000000, bg \#00b979' \
-             'fg \#70ff90, bg \#404040'
+		'fg \#50ff70, bg \#404040' \
+		'fg \#50ff70, bg \#505050' \
+		'fg \#000000, bg \#00b979' \
+		'fg \#70ff90, bg \#404040'
 
 cfg min 6 494949 \
-             'fg \#000000, bg \#c9c9c9' \
-             'fg \#595959, bg \#c9c9c9' \
-             'fg \#000000, bg \#c9c9c9' \
-             'fg \#000000, bg \#c9c9c9'
+		'fg \#000000, bg \#c9c9c9' \
+		'fg \#595959, bg \#c9c9c9' \
+		'fg \#000000, bg \#c9c9c9' \
+		'fg \#000000, bg \#c9c9c9'
 
 cfg minl 6 7090c0 \
-             'fg \#000000, bg \#c9c9c9' \
-             'fg \#595959, bg \#c9c9c9' \
-             'fg \#000000, bg \#c9c9c9' \
-             'fg \#000000, bg \#c9c9c9'
+		'fg \#000000, bg \#c9c9c9' \
+		'fg \#595959, bg \#c9c9c9' \
+		'fg \#000000, bg \#c9c9c9' \
+		'fg \#000000, bg \#c9c9c9'
 
 cfg tea 6 9999a0 \
-             'fg \#000000, bg \#c0d0a0' \
-             'fg \#000000, bg \#7cc291' \
-             'fg \#000000, bg \#c7cb7b' \
-             'fg \#000000, bg \#c0d0a0'
+		'fg \#000000, bg \#c0d0a0' \
+		'fg \#000000, bg \#7cc291' \
+		'fg \#000000, bg \#c7cb7b' \
+		'fg \#000000, bg \#c0d0a0'
