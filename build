@@ -6,32 +6,32 @@
 # $4-7: Colorset data
 #
 print_cfg () {
-	echo "#"
-	echo "# Style: $1"
-	echo "#"
-	echo "CleanupColorsets"
-	echo "DefaultColorset 0"           # tmp
-	echo "Style * ColorSet 1"          # tmp
-	echo "Style * HilightColorset 2"   # tmp
-	echo "MenuStyle * MenuColorset 3"  # tmp
-	echo "ColorSet 0 $4"
-	echo "ColorSet 1 $5"
-	echo "ColorSet 2 $6"
-	echo "ColorSet 3 $7"
-	echo "Style * BorderWidth $2"
-	echo "Style * HandleWidth $2"
-	echo "Style FvwmPager BackColor \\#000000"
-	echo "Style FvwmPager BorderWidth 1"
-	echo "Style FvwmPager HandleWidth 1"
-	echo "Style FvwmPager HilightBack \\#000000"
-	echo "Exec exec xsetroot -solid \\#${3}"
+	printf '#\n'
+	printf '# Style: %s\n' "$1"
+	printf '#\n'
+	printf 'CleanupColorsets\n'
+	printf 'DefaultColorset 0\n'           # Temporary
+	printf 'Style * ColorSet 1\n'          # Temporary
+	printf 'Style * HilightColorset 2\n'   # Temporary
+	printf 'MenuStyle * MenuColorset 3\n'  # Temporary
+	printf 'ColorSet 0 %s\n' "$4"
+	printf 'ColorSet 1 %s\n' "$5"
+	printf 'ColorSet 2 %s\n' "$6"
+	printf 'ColorSet 3 %s\n' "$7"
+	printf 'Style * BorderWidth %d\n' "$2"
+	printf 'Style * HandleWidth %d\n' "$2"
+	printf 'Style FvwmPager BackColor \\#000000\n'
+	printf 'Style FvwmPager BorderWidth 1\n'
+	printf 'Style FvwmPager HandleWidth 1\n'
+	printf 'Style FvwmPager HilightBack \\#000000\n'
+	printf 'Exec exec xsetroot -solid \\#%s\n' "$3"
 	return $?
 }
 
 cfg () {
 	mkdir -p styles/base
 	print_cfg "$@" > "styles/base/$1"
-	echo "styles/base/$1"
+	printf 'styles/base/%s\n' "$1"
 }
 
 # Colorsets:
@@ -50,7 +50,7 @@ cfg () {
 # workstations in the 1980s and early 1990s. This style still ships with TWM,
 # but it is not the default. This is an approximation.
 #
-cfg twm1 5 cccccc \
+cfg twm1 5 303030 \
 		'fg \#ffffff, bg \#c94979' \
 		'fg \#d3d3d3, bg \#c94979' \
 		'fg \#ffffff, bg \#c94979' \
@@ -59,7 +59,7 @@ cfg twm1 5 cccccc \
 # At some point, the default TWM style became a teal color. This is that style,
 # which is now commonly associated with TWM. This is an approximation.
 #
-cfg twm2 5 b9b9b9 \
+cfg twm2 5 004039 \
 		'fg \#ffffff, bg \#22aa99' \
 		'fg \#d9d9d9, bg \#22aa99' \
 		'fg \#ffffff, bg \#22aa99' \
@@ -69,11 +69,11 @@ cfg twm2 5 b9b9b9 \
 # which is more typical of Japanese aesthetics than the maroon or the teal.
 # This is an approximation.
 #
-cfg twm3 5 404040 \
-		'fg \#000000, bg \#89a9e9' \
-		'fg \#303050, bg \#89a9e9' \
-		'fg \#000000, bg \#89a9e9' \
-		'fg \#000000, bg \#89a9e9'
+cfg twm3 5 707070 \
+		'fg \#000000, bg \#99b9f9' \
+		'fg \#304050, bg \#99b9f9' \
+		'fg \#000000, bg \#89b9f9' \
+		'fg \#000000, bg \#89b9f9'
 
 ###############################################################################
 #                                                                             #
@@ -151,7 +151,7 @@ cfg cde 6 a0a9b0 \
 # The following settings were sampled from CDE in Solaris. CDE in Solaris uses
 # the "Crimson" color style by default, and "more colors for applications" set.
 #
-cfg solar 5 7080a0 \
+cfg solar 5 696089 \
 		'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
 		'fg \#000000, bg \#aeb2c3, hi \#dcdee5, sh \#5d6069' \
 		'fg \#ffffff, bg \#b24d7a, hi \#dcadc2, sh \#57253b' \
@@ -202,13 +202,13 @@ cfg green 6 111111 \
 		'fg \#000000, bg \#00b979' \
 		'fg \#70ff90, bg \#404040'
 
-cfg min 6 494949 \
+cfg min 6 393939 \
 		'fg \#000000, bg \#c9c9c9' \
 		'fg \#595959, bg \#c9c9c9' \
 		'fg \#000000, bg \#c9c9c9' \
 		'fg \#000000, bg \#c9c9c9'
 
-cfg minl 6 7090c0 \
+cfg minl 6 9090a0 \
 		'fg \#000000, bg \#c9c9c9' \
 		'fg \#595959, bg \#c9c9c9' \
 		'fg \#000000, bg \#c9c9c9' \
