@@ -42,6 +42,6 @@ uninstall:
 	cd $(HOME)/.fvwm && test -L mystyle && rm -f mystyle || true
 
 clean:
-	rm -rf dist
-	rm -f build.lst
-	rm -f styles/base/*
+	rm -rf -- dist
+	rm -f -- build.lst
+	rm -f -- styles/base/*
